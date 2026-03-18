@@ -12,6 +12,6 @@ jobs:
     with:
       target_name: vinwolf
       docker_image: 'ghcr.io/bloppan/vinwolf:latest'
-      docker_cmd: './vinwolf --fuzz {TARGET_SOCK}'
+      docker_cmd: '--fuzz {TARGET_SOCK}'
       readiness_pattern: 'listening on'
       mention: bloppan
