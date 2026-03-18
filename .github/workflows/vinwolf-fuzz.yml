@@ -1,5 +1,9 @@
 name: "Fuzz: vinwolf"
 
+permissions:
+  contents: read
+  pull-requests: write
+
 on:
   workflow_dispatch:
   pull_request:
