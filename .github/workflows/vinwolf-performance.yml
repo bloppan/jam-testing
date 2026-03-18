@@ -1,16 +1,9 @@
 name: "Performance: vinwolf"
 
-permissions:
-  contents: read
-  pull-requests: write
-
 on:
   schedule:
     - cron: '0 6 * * *'
   workflow_dispatch:
-  pull_request:
-    paths:
-      - '.github/workflows/vinwolf-performance.yml'
 
 jobs:
   test:
@@ -19,4 +12,3 @@ jobs:
       target_name: vinwolf
       docker_image: 'ghcr.io/bloppan/vinwolf:latest'
       docker_cmd: '--fuzz {TARGET_SOCK}'
-      readiness_pattern: 'listening on'

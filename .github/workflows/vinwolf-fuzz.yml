@@ -1,14 +1,14 @@
 name: "Fuzz: vinwolf"
 
-permissions:
-  contents: read
-  pull-requests: write
-
 on:
   workflow_dispatch:
   pull_request:
     paths:
       - '.github/workflows/vinwolf-fuzz.yml'
+
+permissions:
+  contents: read
+  issues: write
 
 jobs:
   demo:
